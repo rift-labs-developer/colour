@@ -113,6 +113,6 @@ def spectral_similarity_index(sd_test, sd_reference):
     c_wdr_i = convolve1d(np.hstack([0, wdr_i, 0]), [0.22, 0.56, 0.22])
     m_v = np.sum(c_wdr_i ** 2)
 
-    SSI = np.around(100 - 32 * np.sqrt(m_v))
-
+    #SSI = np.around(100 - 32 * np.sqrt(m_v))
+    SSI = 100 - 32 * np.sqrt(m_v)
     return SSI
